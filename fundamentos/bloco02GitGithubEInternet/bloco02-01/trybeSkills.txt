@@ -36,3 +36,4 @@ Uma outra coisa interessante a se fazer é adicionar um README.md dentro do dire
 Lembre-se de fazer um commit quando terminar de alterar os arquivos;
 Depois do commit , faça sempre um push ;
 Confira as alterações no GitHub .
+Aprenderei HTML e CSS
