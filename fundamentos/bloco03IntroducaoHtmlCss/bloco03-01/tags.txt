@@ -1,0 +1,2 @@
+Tags podem ou não conter um fechamento. <nomeTag atributo="valor"> conteúdo da tag </nomeTag>
+Parágrafo: <p id="texto"> Olá mundo </p>
