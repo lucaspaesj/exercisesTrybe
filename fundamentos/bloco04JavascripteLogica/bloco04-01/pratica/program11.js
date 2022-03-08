@@ -1,6 +1,6 @@
 // 11-
 
-const salarioBruto = Math.floor(Math.random() * 10000) + 1000;
+const salarioBruto = 1000;
 let salarioComInssDescontado = null;
 let salarioComIrDescontado = null;
 let salarioLiquido = null;
@@ -35,6 +35,7 @@ if (salarioBruto >= 1){
 
 if(salarioComInssDescontado <= 1903.98){
     salarioLiquido = salarioComInssDescontado;
+    console.log(`Você é isento(a) de pagar Imposto de Renda`)
 }
 else if(salarioComInssDescontado > 1903.98 && salarioComInssDescontado <= 2826.65){
     let aliquota = 0.075;
