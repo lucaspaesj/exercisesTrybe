@@ -1,6 +1,6 @@
 // 11-
 
-const salarioBruto = 6000;
+const salarioBruto = Math.floor(Math.random() * 10000) + 1000;
 let salarioComInssDescontado = null;
 let salarioComIrDescontado = null;
 let salarioLiquido = null;
