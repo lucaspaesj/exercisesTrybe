@@ -8,7 +8,7 @@ for(let index = 0; index < numbers.length; index += 1){
     if(typeof numbers[index + 1] == "number"){
         multipliedNumbers.push(numbers[index] * numbers[index + 1]);
     }
-    else if(typeof numbers[index + 1] != "number"){
+    else {
         multipliedNumbers.push(numbers[index] * 2);
     }
 }
