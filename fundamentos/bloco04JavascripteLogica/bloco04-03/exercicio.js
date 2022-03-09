@@ -1,6 +1,3 @@
-//4. Desenvolva um algoritmo que verifica se a pessoa é maior ou menor de idade.
-//Imprima no console seguindo o exemplo: "A pessoa é maior de idade".
-
 //5. Crie um algoritmo que recebe a idade de Manu, Ana e Ronald e imprime quem é a mais nova no formato:
 // "Pessoa" é a mais nova.
 
@@ -46,3 +43,6 @@ else if(jogadaPlayerTwo === "pedra" && jogadaPlayerOne === "tesoura" || jogadaPl
 else {
     console.log("A tie")
 }
+
+//4. Desenvolva um algoritmo que verifica se a pessoa é maior ou menor de idade.
+//Imprima no console seguindo o exemplo: "A pessoa é maior de idade".
