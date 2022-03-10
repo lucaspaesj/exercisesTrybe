@@ -11,32 +11,32 @@ function ligarDesligar() {
     else {
         statusCarro = "desligado";
     }
-    return console.log(statusCarro);
+    return statusCarro;
 }
 
 function acelerar(incremento) {
     aceleracao += incremento;
-    return console.log(`Acelerando a ${aceleracao} m/s²`);
+    return `Acelerando a ${aceleracao} m/s²`;
 }
 
 function desacelerar(decremento) {
     aceleracao -= decremento;
-    return console.log(`Desacelerando para ${aceleracao} m/s²`)
+    return `Desacelerando para ${aceleracao} m/s²`;
 }
 
 function girarVolante(anguloRotacao) {
     rotacaoDoVolante = anguloRotacao;
 
-    return console.log(rotacaoDoVolante + "º");
+    return rotacaoDoVolante + "º";
 }
 
-ligarDesligar();
-acelerar(20);
-desacelerar(5);
-girarVolante(-45);
-girarVolante(45);
-desacelerar(15);
-ligarDesligar();
+console.log(ligarDesligar());
+console.log(acelerar(20));
+console.log(desacelerar(5));
+console.log(girarVolante(-45));
+console.log(girarVolante(45));
+console.log(desacelerar(15));
+console.log(ligarDesligar());
 
 // Exemplo 1:
 // Sem função
