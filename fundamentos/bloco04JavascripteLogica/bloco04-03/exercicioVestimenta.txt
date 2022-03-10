@@ -1,0 +1,17 @@
+1- Levantar da cama;
+2- Caminhar até o banheiro;
+3- Retirar as roupas;
+4- Abrir a porta do box;
+5- Entrar no box;
+6- Fechar a porta do box;
+7- Tomar banho;
+8- Secar;
+9- Abrir a porta do box;
+10- Sair do box;
+11- Fechar a porta do box;
+12- Caminhar até o quarto;
+13- Abrir a porta do armário;
+14- Escolher as roupas;
+15- Retirá-las do armário;
+16- Fechar a porta do armário;
+17- Vestir as roupas.

@@ -8,10 +8,10 @@ for(index = 0; index < 25; index += 1){
 
 // 9-
 
-let arrayDivisões = [];
+let arrayDivisoes = [];
 for(index = 0; index < ar.length; index += 1){
     let valorDividido = ar[index] / 2;
-    arrayDivisões.push(valorDividido);
+    arrayDivisoes.push(valorDividido);
 }
 
-console.log(arrayDivisões);
+console.log(arrayDivisoes);
