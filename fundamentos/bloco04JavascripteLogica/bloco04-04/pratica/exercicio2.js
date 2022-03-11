@@ -129,5 +129,5 @@ function checkEndWord(word, ending){
     return isEqual;
 }
 
-console.log(checkEndWord("Trybeee", "beee"));
+console.log(checkEndWord("Trybe", "be"));
 
