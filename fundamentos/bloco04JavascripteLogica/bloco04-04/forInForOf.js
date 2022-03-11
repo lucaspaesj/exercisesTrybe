@@ -47,3 +47,21 @@ for (let value of food) {
     console.log(value);
 };
 //resultado: hamburguer, bife, acarajé;
+
+let arr = [2, 3, 6, 7, 10, 1];
+let biggestValue = 0;
+for (let key in arr) {
+    for (let index = 1; index < arr.lenght; index += 1) {
+        if (arr[key] > arr[index]) {
+            biggestValue = arr[key];
+        }
+        else if (arr[key] < arr[index]) {
+            biggestValue = arr[index];
+        }
+        else {
+            biggestValue = biggestValue;
+        }
+    }
+}
+
+console.log(biggestValue);
