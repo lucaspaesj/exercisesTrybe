@@ -14,3 +14,4 @@ console.log(document.getElementById("teste"));
 
 document.getElementById("teste").innerText = "Aprendizados da aula de hoje";
 
+
