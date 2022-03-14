@@ -8,10 +8,10 @@
 // Se só busco o texto, existe outra propriedade que filtra e retorna apenas o texto: .innerText
 // .style busca o estilo(CSS) aplicado dentro daquela tag
 
-console.log(document.getElementById("teste"));
+console.log(document.querySelectorAll("#teste"));
 
 // Alterando o conteúdo do HTML pelo JS:
 
-document.getElementById("teste").innerText = "Aprendizados da aula de hoje";
+document.querySelectorAll("#teste")[0].innerText = "Aprendizados da aula de hoje";
 
 

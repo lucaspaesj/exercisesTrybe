@@ -1,6 +1,6 @@
 // document.getElementByClassName - Seleciona elementos 
 
-let pilotosDeF1 = document.getElementsByClassName("piloto-f1-atual");
+let pilotosDeF1 = document.querySelectorAll(".piloto-f1-atual");
 
 // Alterando todos os elementos que possuem a classe "piloto-f1-atual"
 
