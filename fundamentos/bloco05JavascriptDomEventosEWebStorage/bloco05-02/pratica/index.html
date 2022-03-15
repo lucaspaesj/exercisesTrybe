@@ -98,7 +98,7 @@
 
         // 7- Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
 
-        function createChildImg(nameParent, valueSource, nameClass, nameTag){
+        function createChildImg(nameParent, valueSource, nameClass, nameTag) {
             let parent = document.querySelector(nameParent);
             let source = valueSource;
             let image = document.createElement(nameTag);
@@ -110,7 +110,7 @@
 
         // 8- Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
 
-        function createUL(nameParent, text){
+        function createUL(nameParent, text) {
             let parent = document.querySelector(nameParent);
             let unorderedList = document.createElement("ul");
             unorderedList.innerText = text;
@@ -118,16 +118,66 @@
         }
         createUL(".right-content", "Lista de 1 a 10: ");
 
-        function createLI(nameParent){
+        function createLI(nameParent) {
             let parent = document.querySelector(nameParent);
             let items = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
-            for(let item of items){
+            for (let item of items) {
                 let listItemToAdd = document.createElement("li");
                 listItemToAdd.innerText = item;
                 parent.appendChild(listItemToAdd);
             }
         }
-        createLI(".right-content");
+        createLI("ul");
+
+        // 9- Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+
+        function createChildWithoutContent(nameTag, nameParent) {
+            let child = document.createElement(nameTag);
+            let parent = document.querySelector(nameParent);
+            parent.appendChild(child);
+        }
+
+        for (let i = 0; i < 3; i += 1) {
+            createChildWithoutContent("h3", "main");
+        }
+
+        // Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+        // 10- Adicione a classe title na tag h1 criada;
+
+        document.querySelector("h1").className = "title";
+
+        // 11- Adicione a classe description nas 3 tags h3 criadas;
+
+        let finalh3 = document.getElementsByTagName("h3");
+        for (let i = 0; i < finalh3.length; i += 1) {
+            finalh3[i].className = "description";
+        }
+
+        // 12- Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+
+        let mainContent = document.querySelector(".main-content");
+        let leftContent = document.querySelector(".left-content")
+        mainContent.removeChild(leftContent);
+
+        // 13- Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+
+        let rightContent = document.querySelector(".right-content");
+        rightContent.style.marginRight = "auto";
+
+        // 14- Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+
+        mainContent.style.background = "green";
+
+        // 15- Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+
+        function removeListItem(nameList, classListItem) {
+            let unorderedList = document.querySelector(nameList);
+            let itemToRemove = classListItem;
+            unorderedList.removeChild(itemToRemove);
+        }
+
+        removeListItem("ul", document.querySelector("ul").lastElementChild);
+        removeListItem("ul", document.querySelector("ul").lastElementChild);
     </script>
 </body>
 
