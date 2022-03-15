@@ -60,6 +60,7 @@
 <body>
     <script>
         // 1- Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+
         let body = document.getElementsByTagName("body");
         function createChild(nameTag, nameParent, text) {
             let child = document.createElement(nameTag);
@@ -68,7 +69,9 @@
             parent.appendChild(child);
         }
         createChild("h1", "body", "JavaScript DOM como filho da tag body");
+
         // 2- Adicione a tag main com a classe main-content como filho da tag body ;
+
         function createChildWithClass(nameTag, nameParent, nameClass) {
             let child = document.createElement(nameTag);
             let parent = document.querySelector(nameParent);
@@ -76,15 +79,25 @@
             parent.appendChild(child);
         }
         createChildWithClass("main", "body", "main-content");
+
         // 3- Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+
         createChildWithClass("section", "main", "center-content");
+
         // 4- Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+
         createChild("p", "section", "Minha página WEB! Olá mundo! VQV!");
+
         // 5- Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+
         createChildWithClass("section", "main", "left-content");
+
         // 6- Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+
         createChildWithClass("section", "main", "right-content");
+
         // 7- Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
+
         function createChildImg(nameParent, valueSource, nameClass, nameTag){
             let parent = document.querySelector(nameParent);
             let source = valueSource;
@@ -94,6 +107,27 @@
             parent.appendChild(image);
         }
         createChildImg(".left-content", "https://picsum.photos/200", "small-image", "img");
+
+        // 8- Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+
+        function createUL(nameParent, text){
+            let parent = document.querySelector(nameParent);
+            let unorderedList = document.createElement("ul");
+            unorderedList.innerText = text;
+            parent.appendChild(unorderedList);
+        }
+        createUL(".right-content", "Lista de 1 a 10: ");
+
+        function createLI(nameParent){
+            let parent = document.querySelector(nameParent);
+            let items = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"];
+            for(let item of items){
+                let listItemToAdd = document.createElement("li");
+                listItemToAdd.innerText = item;
+                parent.appendChild(listItemToAdd);
+            }
+        }
+        createLI(".right-content");
     </script>
 </body>
 
