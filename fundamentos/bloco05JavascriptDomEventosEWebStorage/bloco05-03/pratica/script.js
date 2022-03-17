@@ -71,10 +71,10 @@ Implemente uma função que adicione ao botão "Feriados" um evento de "click" q
 É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 */
 
-let btn = document.getElementById("btn-holiday");
+let btnHoliday = document.getElementById("btn-holiday");
 let holidays = document.getElementsByClassName("holiday");
 
-function changeBackgroundColor(color){
+function changeBackgroundColor(color) {
     for (let i = 0; i < holidays.length; i += 1) {
         holidays[i].style.backgroundColor = color;
     }
@@ -83,17 +83,17 @@ function changeBackgroundColor(color){
 changeBackgroundColor("rgb(238,238,238)");
 
 function changeHolidays() {
-    for(let holiday of holidays){
-        if(holiday.style.backgroundColor === "rgb(238, 238, 238)"){
+    for (let holiday of holidays) {
+        if (holiday.style.backgroundColor === "rgb(238, 238, 238)") {
             changeBackgroundColor("white");
         }
-        else if(holiday.style.backgroundColor === "white"){
+        else if (holiday.style.backgroundColor === "white") {
             changeBackgroundColor("rgb(238, 238, 238)");
         }
     }
 }
 
-btn.addEventListener("click", changeHolidays);
+btnHoliday.addEventListener("click", changeHolidays);
 
 /* 
 Exercício 4:
@@ -102,7 +102,7 @@ Adicione a este botão o ID "btn-friday" .
 Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 */
 
-function btnSexta(str){
+function btnSexta(str) {
     let divParent = document.querySelector(".buttons-container");
     let btn = document.createElement("button");
     btn.innerText = str;
@@ -118,3 +118,22 @@ Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click
 É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial exibindo os dias.
 */
 
+let fridays = document.getElementsByClassName("friday");
+let btnFriday = document.getElementById("btn-friday");
+
+function clickBtnFriday() {
+    if (fridays[0].innerText === "SEXTOUUU!!!") {
+        fridays[0].innerText = "4";
+        fridays[1].innerText = "11";
+        fridays[2].innerText = "18";
+        fridays[3].innerText = "25";
+    }
+    else {
+        fridays[0].innerText = "SEXTOUUU!!!";
+        fridays[1].innerText = "SEXTOUUU!!!";
+        fridays[2].innerText = "SEXTOUUU!!!";
+        fridays[3].innerText = "SEXTOUUU!!!";
+    }
+}
+
+btnFriday.addEventListener("click", clickBtnFriday);
