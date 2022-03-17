@@ -218,14 +218,18 @@ Implemente uma função que adiciona um evento que, ao clicar em um dia do mês 
 Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
 */
 
-let colorDiv = document.querySelector("#taskSubtitle").style.backgroundColor;
+let colorDiv = "red";
 
 function daysClick(event) {
-    if(event.target.style.color === "blue"){
-        event.target.style.color = "rgb(119,119,119)";
+    if(document.querySelector("#taskSubtitle").style.backgroundColor === "red"){
+        if(event.target.style.color === "red"){
+            event.target.style.color = "rgb(119,119,119)";
+        }
+        else{
+            event.target.style.color = colorDiv;
+        }
     }
     else{
-        event.target.style.color = colorDiv;
     }
 }
 
