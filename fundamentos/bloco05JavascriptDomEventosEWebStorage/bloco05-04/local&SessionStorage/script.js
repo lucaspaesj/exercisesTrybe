@@ -61,3 +61,21 @@ let classes = ['2019/set', '2019/oct'];
 storage.setItem("classes", JSON.stringify(classes));
 let cls = JSON.parse(storage.getItem("classes"));
 console.log(cls);
+localStorage.clear();
+
+// Ou seja, quando usar o localStorage e quando utilizar o sessionStorage:
+// Depende muito de qual problema estamos resolvendo;
+// Se quisermos salvar alguma informação de preferências do usuário(ex: darkMode: true ou false), ou a partir do login precisamos salvar o nome da pessoa - Faz mais sentido o localStorage nestas ocasiões, pois dessa forma na próxima vez que ela entrar fica salvo.
+
+// Resumo das funções(parâmetros):
+/**
+ * localStorage.setItem("chave", "valor");
+ * localStorage.getItem("chave");
+ * localStorage.removeItem("chave");
+ * localStorage.clear(); - Exemplo: - logout -
+ * sessionStorage possui as mesmas funções acima;
+ */
+
+// localStorage e sessionStorage são mais simples que Cookies, mas não quer dizer que estes são dispensáveis.
+// Geralmente, utilizamos cookies quando precisamos dos dados no cliente ( browser ) e no servidor, pois os Cookies são enviados para o servidor a cada requisição. Caso contrário, utilizamos localStorage e sessionStorage.
+// Um bom ponto de atenção para decidir quando você deve usar um ou outro é perguntar a si mesmo sobre a importância da permanência da informação que você vai armazenar.
