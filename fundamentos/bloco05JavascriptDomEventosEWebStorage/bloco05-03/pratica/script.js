@@ -146,11 +146,11 @@ Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do
 let ul = document.querySelector("#days");
 
 
-function daysOver(event){
+function daysOver(event) {
     event.target.style.fontSize = "40px";
 }
 
-function daysOut(event){
+function daysOut(event) {
     event.target.style.fontSize = "20px";
 }
 
@@ -163,7 +163,7 @@ Implemente uma função que adiciona uma tarefa personalizada ao calendário. A 
 O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 */
 
-function addTask(str){
+function addTask(str) {
     let divParent = document.querySelector(".my-tasks");
     let newTask = document.createElement("span");
     newTask.innerHTML = str;
@@ -179,10 +179,11 @@ O parâmetro cor deverá ser utilizado como cor de fundo da <div> criada.
 O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks" .
 */
 
-function addLegend(str){
+function addLegend(str) {
     let divParent = document.querySelector(".my-tasks");
     let newDiv = document.createElement("div");
     newDiv.className = "task";
+    newDiv.id = "taskSubtitle"
     newDiv.style.backgroundColor = str;
     divParent.appendChild(newDiv);
 }
@@ -197,9 +198,8 @@ Ao clicar novamente no elemento, a sua classe deverá voltar a ser somente task 
 
 let divTask = document.querySelector(".task");
 
-function clickTask(event){
-    console.log(event.target);
-    if(event.target.className === "task"){
+function clickTask(event) {
+    if (event.target.className === "task") {
         event.target.className = "task selected";
         event.target.style.backgroundColor = "red";
     }
@@ -207,7 +207,7 @@ function clickTask(event){
         event.target.className = "task";
         event.target.style.backgroundColor = "blue";
     }
-    
+
 }
 
 divTask.addEventListener("click", clickTask);
@@ -216,4 +216,23 @@ divTask.addEventListener("click", clickTask);
 Exercício 10:
 Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
 Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) .
+*/
+
+let colorDiv = document.querySelector("#taskSubtitle").style.backgroundColor;
+
+function daysClick(event) {
+    if(event.target.style.color === "blue"){
+        event.target.style.color = "rgb(119,119,119)";
+    }
+    else{
+        event.target.style.color = colorDiv;
+    }
+}
+
+ul.addEventListener("click", daysClick);
+
+/*
+Exercício bônus:
+
+
 */
