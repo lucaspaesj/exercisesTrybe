@@ -156,6 +156,7 @@ let inputFive = document.getElementById("inputFontFamily");
 let btnFive = document.getElementById("btnChangeFontFamily");
 
 inputFive.addEventListener("keyup", getKeyFive);
+btnFive.addEventListener("click", changeFontFamily);
 
 function changeFontFamily(){
     let section = document.getElementById("sectionOne");
