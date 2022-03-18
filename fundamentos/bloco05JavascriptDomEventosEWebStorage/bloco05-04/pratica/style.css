@@ -19,6 +19,8 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 15px;
+    line-height: 25px;
+    font-family: Arial;
 }
 
 #sectionOne h2{
@@ -53,11 +55,39 @@ h1{
     margin-right: auto;
 }
 
+#sectionText{
+    margin-top: 3%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url("img.jpg");
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+}
+
 h4{
     text-align: center;
+    color: azure;
 }
 
 #sectionBtnInput{
-    padding-top: 5%;
+    padding-top: 3%;
     padding-bottom: 5%;
+}
+
+a{
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    background-image: url("img.jpg");
+    padding: 3%;
+}
+
+#divLink{
+    padding: 3%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }

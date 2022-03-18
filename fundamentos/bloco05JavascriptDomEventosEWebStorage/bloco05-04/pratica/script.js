@@ -5,23 +5,33 @@ let btnOne = document.getElementById("btnChangeBackgroundColor");
 
 // referência do próximo código: https://stackoverflow.com/questions/48484767/javascript-check-if-string-is-valid-css-color
 let isColor = function (strColor) {
-    var s = new Option().style;
+    let s = new Option().style;
     s.color = strColor;
     return s.color == strColor;
 }
 
 // referência do próximo código: https://stackoverflow.com/questions/18042133/check-if-input-is-number-or-letter-javascript
-let isNumber = function (param){
+let isNumber = function (param) {
     var x = param.value;
-    var regex=/^[0-9]+$/;
-    if (!x.match(regex))
-    {
+    var regex = /^[0-9]+$/;
+    if (!x.match(regex)) {
         return false;
     }
-    else{
+    else {
         return true;
     }
 }
+
+let isFontValid = function (strFont) {
+    let fonts = ["Arial", "Verdana", "Helvetica", "Tahoma", "Trebuchet MS", "Times New Roman", "Georgia", "Garamond", "Courier New", "Brush Script MT"];
+    for(let font of fonts){
+        if(strFont !== font){
+            return false;
+        }
+        return true;
+    }
+}
+
 
 btnOne.addEventListener("click", changeBackgroundColor);
 inputOne.addEventListener("keyup", getKeyOne);
@@ -60,7 +70,7 @@ function changeColor() {
     let section = document.querySelector("#sectionOne");
     let value = inputTwo.value;
     if (isColor(value)) {
-        section.style.color = inputTwo.value;sectionTextColor
+        section.style.color = inputTwo.value; sectionTextColor
         localStorage.removeItem("sectionTextColor");
         localStorage.setItem("sectionTextColor", value);
         inputTwo.value = "";
@@ -90,14 +100,14 @@ inputThree.addEventListener("keyup", getKeyThree);
 function changeFontSize() {
     let section = document.getElementById("sectionOne");
     let value = inputThree.value;
-    if (isNumber(inputThree)){
+    if (isNumber(inputThree)) {
         section.style.fontSize = value + "px";
         localStorage.removeItem("sectionTextSize");
         localStorage.setItem("sectionTextSize", value);
         inputThree.value = "";
         alert("Tamanho da letra sendo modificado 🔥");
     }
-    else{
+    else {
         inputThree.value = "";
         alert("O valor inserido não é válido, apenas números são aceitos 😀");
     }
@@ -110,7 +120,65 @@ function getKeyThree(event) {
     }
 }
 
-// 4- 
+// 4- Espaçamento entre as linhas do texto;
+
+let inputFour = document.getElementById("inputLineSpacing");
+let btnFour = document.getElementById("btnChangeLineSpacing");
+
+inputFour.addEventListener("keyup", getKeyFour);
+
+function changeLineSpacing() {
+    let section = document.getElementById("sectionOne");
+    let value = inputFour.value;
+    if (isNumber(inputFour)) {
+        section.style.lineHeight = value + "px";
+        localStorage.removeItem("sectionLineSpacing");
+        localStorage.setItem("sectionLineSpacing", value);
+        inputFour.value = "";
+        alert("Espaçamento entre linhas do texto sendo alterado 🔥");
+    }
+    else {
+        inputFour.value = "";
+        alert("O valor inserido não é válido, apenas números são aceitos 😀");
+    }
+}
+
+function getKeyFour(event) {
+    let key = event.key;
+    if (key === "Enter") {
+        changeLineSpacing();
+    }
+}
+
+// 5- Tipo da fonte ( Font family ):
+
+let inputFive = document.getElementById("inputFontFamily");
+let btnFive = document.getElementById("btnChangeFontFamily");
+
+inputFive.addEventListener("keyup", getKeyFive);
+
+function changeFontFamily(){
+    let section = document.getElementById("sectionOne");
+    value = inputFive.value;
+    if(isFontValid(value)){
+        section.style.fontFamily = value;
+        localStorage.removeItem("sectionFontFamily");
+        localStorage.setItem("sectionFontFamily", value);
+        inputFive.value = "";
+        alert("Estilo de fonte do texto sendo alterado 🔥");
+    }
+    else{
+        inputFive.value = "";
+        alert("A fonte selecionada não é válida, lembre-se de checar as fontes disponíveis no link acima do botão de mudança 😀");
+    }
+}
+
+function getKeyFive(event) {
+    let key = event.key;
+    if (key === "Enter") {
+        changeFontFamily();
+    }
+}
 
 window.onload = function () {
     if (localStorage.getItem("backgroundColor") === null) {
@@ -133,5 +201,19 @@ window.onload = function () {
     else {
         let section = document.querySelector("#sectionOne");
         section.style.fontSize = localStorage.getItem("sectionTextSize") + "px";
+    }
+    if (localStorage.getItem("sectionLineSpacing") === null) {
+        localStorage.setItem("sectionLineSpacing", "25px");
+    }
+    else {
+        let section = document.querySelector("#sectionOne");
+        section.style.lineHeight = localStorage.getItem("sectionLineSpacing") + "px";
+    }
+    if (localStorage.getItem("sectionFontFamily") === null) {
+        localStorage.setItem("sectionFontFamily", "Arial");
+    }
+    else {
+        let section = document.querySelector("#sectionOne");
+        section.style.fontFamily = localStorage.getItem("sectionFontFamily");
     }
 }
