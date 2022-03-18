@@ -70,7 +70,7 @@ function changeColor() {
     let section = document.querySelector("#sectionOne");
     let value = inputTwo.value;
     if (isColor(value)) {
-        section.style.color = inputTwo.value; sectionTextColor
+        section.style.color = inputTwo.value;
         localStorage.removeItem("sectionTextColor");
         localStorage.setItem("sectionTextColor", value);
         inputTwo.value = "";
