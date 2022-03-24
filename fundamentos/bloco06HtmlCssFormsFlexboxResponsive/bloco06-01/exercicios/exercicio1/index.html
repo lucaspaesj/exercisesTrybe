@@ -8,10 +8,16 @@
 </head>
 <body>
     <h1>Faça seu login:</h1>
-    <form>
-        <input id="email" type="email" placeholder="Digite seu e-mail" required autocomplete="off" autofocus>
-        <input id="password" type="password" placeholder="Digite sua senha" required>
-        <label for="lembrar"><input id="lembrar" type="checkbox" name="lembrar">Lembre-me</label>
+    <form method="GET" enctype="multipart/form-data">
+        <label for="email">
+            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required autocomplete="off" autofocus>
+        </label>
+        <label for="password">
+            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+        </label>
+        <label for="lembrar">
+            <input id="lembrar" type="checkbox" name="lembrar">Lembre-me
+        </label>
         <button type="submit">Entrar</button>
     </form>
 </body>
