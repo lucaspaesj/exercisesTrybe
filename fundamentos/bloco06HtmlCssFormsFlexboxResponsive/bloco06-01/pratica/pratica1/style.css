@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2b6861;
+}
+
+#allContent{
+    width: 80%;
+    margin: 40px auto;
+}
+
+header{
+    background-color: #77e7d7;
+    border: 1px solid #3fb6a6;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+main{
+    margin-top: 5%;
+    background-color: #77e7d7;
+    border: 1px solid #3fb6a6;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.formUnit{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.formUnit input[type = text]{
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.formUnit input[type = email]{
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.formUnit fieldset{
+    padding: 5px;
+}
+
+.formUnit textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    resize: none;
+    margin: 10px auto;
+}
+
+.formUnit input[type=datetime]{
+    text-align: center;
+    width: 36%;
+    margin: auto;
+    padding: 5px;
+}
+
+.formUnit button{
+    display: block;
+    padding: 10px;
+    width: 20%;
+    margin: auto;
+}
