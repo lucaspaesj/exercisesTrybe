@@ -1,0 +1,33 @@
+Como determinar a melhor biblioteca para um desenvolvimento específico?
+
+
+Há milhares de bibliotecas disponíveis e não tem uma resposta correta para qual biblioteca você deve usar. No entanto, você pode fazer algumas considerações na hora de definir qual biblioteca mais se adequa ao produto que você está desenvolvendo. É interessante ponderar como será a experiência do time de desenvolvimento com a biblioteca e como será a experiência do usuário:
+
+
+A biblioteca trará uma boa experiência para quem a desenvolve?
+
+Bem documentada : a biblioteca deve ser de fácil entendimento, com demonstrações de uso real e um guia sobre como utilizá-la. Se uma biblioteca não tem uma documentação, este pode ser um indício de que ela pode não ser tão amigável assim para time de desenvolvimento. Prefira bibliotecas com uma documentação acessível;
+
+Flexível : é fácil alterar as opções de configuração da funcionalidade que você gostaria de usar? Muitas vezes, a biblioteca pode ter demonstrações impressionantes, mas ser engessada para um uso específico;
+
+Atualizada : o mundo da Internet está em constante mudança. Bibliotecas podem parar de funcionar por depender de alguma característica específica de um navegador que foi atualizado. Verifique se a biblioteca que você quer utilizar está sempre ativa e atualizada;
+
+Testada : todas as bibliotecas devem incluir testes que garantem que as suas funcionalidades são executadas como o esperado.
+Código limpo : algumas vezes tratamos a biblioteca como uma caixa preta, e não damos tanta importância para o código que implementa as suas funcionalidades. Mas pode acontecer de você precisar entendê-lo, caso você encontre algum bug que pode estar relacionado à biblioteca, por exemplo. Dê uma olhada nos códigos da biblioteca e veja se ele é fácil de ser lido, com trechos comentados.
+
+Comunidade ativa : você vai ter dúvidas, e você irá encontrar bugs nas bibliotecas que usará como pessoa desenvolvedora. A melhor forma de tirar dúvidas e resolver bugs é junto com outras pessoas desenvolvedoras em uma comunidade ativa.
+
+Se a biblioteca é hospedada em sites como o GitHub, algumas dicas para conferir se a biblioteca é uma boa escolha é olhar o número de Forks ou o número de estrelas .
+
+Esses números são um bom indicativo sobre a quantidade de pessoas desenvolvedoras e pessoas programadoras que estão utilizando a biblioteca. Algumas podem atingir milhares de Forks! Você pode conferir também se há muitos problemas em aberto . Se sim, isso pode ser um sinal de que a comunidade não está muito empenhada em resolvê-los.
+
+Além dessas dicas, observe também como a comunidade externa está utilizando a biblioteca. As perguntas no StackOverflow são respondidas? Não deixe de buscar na Internet pelo nome da biblioteca que você quer utilizar e analise bem os resultados retornados.
+
+
+A biblioteca trará uma boa experiência para o usuário?
+
+Acessibilidade : verifique se a biblioteca que você quer usar tem recursos que tornarão a sua aplicação acessível para qualquer usuário - inclusive pessoas portadoras de alguma deficiência.
+
+Responsividade : se o usuário for utilizar a aplicação em um dispositivo móvel, a biblioteca deve funcionar bem para o dispositivo. Os botões são grandes o bastante e respondem ao toque?
+
+Suporte ao navegador : algumas bibliotecas podem não suportar todos os navegadores. Elas podem ter sido projetadas para navegadores de dispositivos móveis, ou simplesmente não são compatíveis com navegadores mais antigos. Verifique se a sua biblioteca funciona bem para o navegador que você deseja.

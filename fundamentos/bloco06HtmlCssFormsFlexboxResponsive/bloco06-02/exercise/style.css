@@ -1,0 +1,17 @@
+.form-control{
+    resize: none;
+}
+
+.container{
+    width: 60%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #F6D55C;
+    border-radius: 10px;
+    border-color: #F6D55C;
+    border: 2px solid #ac9957;
+}
+
+body{
+    background-color: #3CAEA3;
+}
