@@ -1,5 +1,4 @@
 let btnSend = document.getElementById("buttonSubmit");
-let btnEraseAll = document.getElementById("buttonEraseAll");
 let inputName = document.getElementById("name");
 let inputEmail = document.getElementById("email");
 let inputRadio = document.getElementById("pref1");
@@ -21,15 +20,3 @@ btnSend.addEventListener("click", function(event){
         alert("Dados enviados com sucesso!");
     }
 })
-
-btnEraseAll.addEventListener("click", eraseAll);
-
-function eraseAll() {
-    inputName.value = "";
-    inputEmail.value = "";
-    inputRadio.checked = true;
-    textArea.value = "";
-    inputDate.value = "";
-    inputCheck1.checked = false;
-    inputCheck2.checked = false;
-}
