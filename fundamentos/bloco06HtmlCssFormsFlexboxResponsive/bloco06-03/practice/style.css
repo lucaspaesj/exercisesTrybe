@@ -1,0 +1,130 @@
+*{box-sizing: border-box;}
+
+html{
+    height: 100%;
+    min-height: 100%;
+}
+
+body{
+    height: 100%;
+    min-height: 100%;
+}
+
+.header{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    background-color: #323433;
+}
+
+.headerNav{
+    /* border: 1px solid blue; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navItemImg{
+    /* border: 1px solid red; */
+    width: 50px;
+    height: 50px;
+}
+
+.navItemP{
+    /* border: 1px solid red; */
+    height: 25px;
+}
+
+.navItemA{
+    /* border: 1px solid red; */
+}
+
+#navItemA a{
+    color: white;
+}
+
+#navItemA a:hover{
+    color:rgb(189, 189, 189);
+}
+
+.navItemImg img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-evenly;
+}
+
+.mainSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 1px solid blue; */
+    width: 100%;
+    text-align: center;
+}
+
+.sectionDivImg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(189, 189, 189);
+    width: 200px;
+    height: 200px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    color: #60697f;
+}
+
+.sectionDivImg img{
+    width: 80%;
+    height: 80%;
+}
+
+.mainSectionInsideH3{
+    /* border: 3px solid green; */
+}
+
+.mainSectionInsideImg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 600px;
+}
+
+.footerSocial{
+    margin-top: 5px;
+    /* border: 1px solid blue; */
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+}
+
+.imgFooter{
+    /* border: 1px solid red; */
+    width: 37.86px;
+    height: 37.86px;
+}
+
+.imgFooter img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.footerSection{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 130px;
+}
