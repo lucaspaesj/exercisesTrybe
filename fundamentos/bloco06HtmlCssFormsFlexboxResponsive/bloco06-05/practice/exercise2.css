@@ -1,0 +1,311 @@
+html {
+    box-sizing: border-box;
+}
+    
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+@media screen and (max-width: 600px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        background-color: blueviolet;
+    }
+
+    header p{
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    nav ul{
+        display: flex;
+        list-style: none;
+        padding-inline-start: 0;
+        justify-content: space-around;
+    }
+
+    nav ul li a{
+        font-size: 18px;
+    }
+
+    .aside-one{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside-one h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .aside-one ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-inline-start: 0;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .aside-two{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside-two h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .aside-two ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-inline-start: 0;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .main-content h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .main-content p{
+        margin: auto;
+        text-align: center;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer h3{
+        font-size: 15;
+        text-align: center;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 601px){
+    header{
+        display: flex;
+        background-color: blueviolet;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid black;
+    }
+
+    header p{
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        padding-inline-start: 0;
+        justify-content: space-around;
+    }
+
+    nav ul li{
+        margin: 0 20px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+
+    .aside-one{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .aside-one h2{
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .aside-one ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-inline-start: 0;
+        align-items: center;
+    }
+
+    .aside-two{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .aside-two h2{
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .aside-two ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-inline-start: 0;
+        align-items: center;
+    }
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .main-content h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .main-content p{
+        margin: auto;
+        text-align: center;
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer h3{
+        font-size: 15;
+        text-align: center;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1001px){
+    header{
+        display: flex;
+        background-color: blueviolet;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid black;
+    }
+
+    header p{
+        margin-left: 40px;
+        font-size: 30px;
+    }
+
+    nav ul{
+        display: flex;
+        list-style: none;
+        padding-inline-start: 0;
+        justify-content: space-around;
+    }
+
+    nav ul li{
+        margin: 0 20px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    .aside-one{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .aside-one h2{
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .aside-one ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-inline-start: 0;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .aside-two{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .aside-two h2{
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .aside-two ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-inline-start: 0;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .main-content h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .main-content p{
+        margin: auto;
+        text-align: center;
+        max-width: 1000px;
+        margin-bottom: 20px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer h3{
+        font-size: 15;
+        text-align: center;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
