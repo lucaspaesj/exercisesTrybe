@@ -22,4 +22,13 @@ const verifyCredentials = ({ userName, password }) => {
 
 const { userName, password } = user;
 
-module.exports = { greetingMessage, loginErrorMessage, verifyCredentials }
+const verificaNumeros = (arr) => {
+  for(let i = 0; i < arr.length; i += 1){
+    if(typeof arr[i] !== "number"){
+      return false;
+    }
+  }
+  return true;
+}
+
+module.exports = { greetingMessage, loginErrorMessage, verifyCredentials, verificaNumeros }

@@ -3,14 +3,27 @@ const {
   greetingMessage,
   loginErrorMessage,
   verifyCredentials,
+  verificaNumeros,
 } = require("./loginValidation.js");
 
-describe("a função verifyCredentials()", () => {
+describe("Testes verificaNumeros()", () => {
+  it("Quando passado [1, 2, 3, 4, 5] retorna true", () => {
+    expect(true).toEqual(verificaNumeros([1, 2, 3, 4, 5]));
+  });
+  it("Quando passado [1, 2, '3', 4, 5] retorna false", () => {
+    expect(false).toEqual(verificaNumeros([1, 2, '3', 4, 5]));
+  });
+  it("Quando passado [''] retorna false", () => {
+    expect(false).toEqual(verificaNumeros(['']));
+  });
+});
+
+describe("Testes verifyCredentials()", () => {
 
   it("verifyCredentials() calls the correct function depending on the user and password input", () => {
 
     const user = {
-      userName: 'Bob',
+      userName: 'Joana',
       password: 123456,
     };
 
