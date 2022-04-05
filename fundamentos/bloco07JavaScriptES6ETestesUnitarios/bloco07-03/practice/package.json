@@ -6,6 +6,9 @@
   "scripts": {
     "test": "jest"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "jest": "^27.5.1"
   }
