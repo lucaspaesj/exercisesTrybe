@@ -75,4 +75,85 @@ const decode = str => {
   return newStr;
 }
 
-module.exports = { sum, myRemove, myFizzBuzz, encode, decode };
+const techList = (arr, str) => {
+  if (arr[0] === undefined) {
+    return "Vazio!";
+  }
+  const newArrAlphabetic = arr.sort();
+  const newArr = [];
+  for (let item in newArrAlphabetic) {
+    newArr.push({
+      tech: arr[item],
+      name: str
+    })
+  }
+  return newArr;
+}
+
+function hydrate(str) {
+  const result = str.match(/\d+/g).map(n => parseInt(n));
+  let sum = 0;
+  let newStr = "";
+  console.log(result);
+  for (let item of result) {
+    sum += item;
+  }
+  sum === 1 ? newStr = `${sum} copo de água` : newStr = `${sum} copos de água`;
+  return newStr;
+}
+
+const searchEmployee = (id, detail) => {
+  const professionalBoard = [
+    {
+      id: '8579-6',
+      firstName: 'Ana',
+      lastName: 'Gates',
+      specialities: ['UX', 'Design'],
+    },
+    {
+      id: '5569-4',
+      firstName: 'George',
+      lastName: 'Jobs',
+      specialities: ['Frontend', 'Redux', 'React', 'CSS'],
+    },
+    {
+      id: '4456-4',
+      firstName: 'Leila',
+      lastName: 'Zuckerberg',
+      specialities: ['Context API', 'RTL', 'Bootstrap'],
+    },
+    {
+      id: '1256-4',
+      firstName: 'Linda',
+      lastName: 'Bezos',
+      specialities: ['Hooks', 'Context API', 'Tailwind CSS'],
+    },
+    {
+      id: '9852-2-2',
+      firstName: 'Jeff',
+      lastName: 'Cook',
+      specialities: ['Ruby', 'SQL'],
+    },
+    {
+      id: '4678-2',
+      firstName: 'Paul',
+      lastName: 'Dodds',
+      specialities: ['Backend'],
+    },
+  ];
+  let detailResult;
+  for(let professional of professionalBoard){
+    if(professional[detail] === undefined){
+      throw new Error("Informação indisponível");
+    }
+    if(id === professional['id']){
+      detailResult = professional[detail];
+    }
+  };
+  if(detailResult === undefined){
+    throw new Error("ID não identificada");
+  }
+  return detailResult;
+};
+
+module.exports = { sum, myRemove, myFizzBuzz, encode, decode, techList, hydrate, searchEmployee };
