@@ -8,7 +8,7 @@ const compareNumbers = (number, aleatoryNumber) => {
 }
 
 const resultLottery = (number, callback) => {
-    const aleatoryNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+    const aleatoryNumber = Math.floor((Math.random() * 5) + 1);
     return callback(number, aleatoryNumber);
 }
 
