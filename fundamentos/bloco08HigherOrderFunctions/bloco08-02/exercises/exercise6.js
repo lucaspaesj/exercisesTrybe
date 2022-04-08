@@ -19,3 +19,4 @@ orderPeople(people, "crescente");
 // orderPeople(people, "decrescente");
 
 console.log(people);
+// 2 - Modifique o sort do exercício anterior para que ordene o array pela idade das pessoas em ordem decrescente .
