@@ -1,0 +1,19 @@
+1 - O que é um código que é executado de modo assíncrono? Qual é a diferença disso para um código que é executado de modo síncrono?
+
+Em geral, os códigos JS são executados em cascata, ou seja, quando se faz um tipo de função, para que a próxima seja executada, a anterior deverá ter sido concluída. Um código assíncrono ocorre em conjunto com o restante do código, sem travar a execução das demais requisições.
+
+2 - Quando você tem que enfileirar várias callbacks , que problema surge?
+
+Callback Hell.
+
+3 - Por que as Promises são uma forma de resolver esse problema?
+
+Pois são melhor estruturadas e possuem um código beeeeem mais enxuto.
+
+4 - Quando você vai se comunicar com uma API , tal comunicação deve ser síncrona ou assíncrona? Lembre-se de que o serviço ao qual você está se conectando pode demorar muito ou pouco para dar retorno, pode estar fora do ar etc.
+
+Assíncrona.
+
+5 - Dada a resposta anterior, o que é fetch e para que ele serve?
+
+Ele busca a resposta daquela comunicação, retornando a "response" - (then) ou o erro - (catch).
