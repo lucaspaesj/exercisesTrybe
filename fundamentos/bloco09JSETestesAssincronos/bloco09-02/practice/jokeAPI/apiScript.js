@@ -3,13 +3,23 @@ const API_URL = 'https://icanhazdadjoke.com/';
 
 const fetchJoke = async () => {
   const myObj = {
-      method: 'GET',
-      headers: { Accept: 'application/json '},
+    method: 'GET',
+    headers: { Accept: 'application/json ' },
   };
 
-  fetch(API_URL, myObj)
-    .then((response) => response.json())
-    .then((data) => data.joke);
+  try {
+    const response = await fetch(API_URL, myObj);
+    const data = await response.json();
+    return data.joke;
+  } catch (error) {
+    console.log(`Algo deu errado :(\n${error}`)
+  }
 };
 
-window.onload = () => fetchJoke();
+const insertJoke = async () => {
+  const joke = await fetchJoke();
+  const element = document.getElementById('jokeContainer');
+  element.innerText = `${joke}`;
+}
+
+window.onload = () => insertJoke();
