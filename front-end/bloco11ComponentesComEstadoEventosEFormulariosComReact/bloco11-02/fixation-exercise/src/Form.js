@@ -1,4 +1,6 @@
 import React from 'react';
+import EstaGostando from './EstaGostando.js';
+import Nome from './Nome';
 
 class Form extends React.Component {
   state = {
@@ -7,6 +9,7 @@ class Form extends React.Component {
     email: '',
     estouGostando: 'Sim',
     aceitoNovasInformacoes: false,
+    formComErros: 'none',
   }
 
   handleChange = ({ target }) => {
@@ -17,22 +20,20 @@ class Form extends React.Component {
     });
   }
 
+  handleError = () => {
+    if (this.state.formComErros) alert('Deu erro aí em');
+  }
+
   render() {
     return (
       <main>
         <h1>Formulário sobre, e em, React</h1>
         <form>
-          <label>Estou gostando de aprender React?</label>
-          <select value={this.state.estouGostando} onChange={this.handleChange} name="estouGostando">
-            <option>Sim</option>
-            <option>Não</option>
-          </select>
-          <label>Qual o seu nome?</label>
-          <input
-            name="nome"
-            type="text"
-            value={this.state.nome}
-            onChange={this.handleChange}
+          <EstaGostando value={this.state.estouGostando} handleChange={this.handleChange} />
+          <Nome value={this.state.nome}
+            handleChange={this.handleChange}
+            haveError={this.state.formComErros}
+            handleError={this.handleError}
           />
           <label>Qual seu email?</label>
           <input
@@ -53,7 +54,7 @@ class Form extends React.Component {
               className="inputCheckBox"
               name="aceitoNovasInformacoes"
               type="checkbox"
-              onChange={ this.handleChange }
+              onChange={this.handleChange}
             />
             <label className="labelInput">Aceito receber novas informações sobre os conteúdos de React em meu email.</label>
           </fieldset>
