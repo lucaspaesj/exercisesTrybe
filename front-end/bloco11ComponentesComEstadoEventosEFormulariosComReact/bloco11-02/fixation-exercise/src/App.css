@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+main {
+  margin-top: 20px;
+}
+
+main h1{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+form label {
+  margin-top: 20px;
+}
+
+form textarea {
+  resize: none;
+}
+
+.labelInput {
+  margin-top: 0;
+}
+
+.inputCheckBox {
+  margin-right: 5px;
+}
+
+.fieldsetNovasInformações {
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.filePhoto {
+  margin-top: 20px;
+}

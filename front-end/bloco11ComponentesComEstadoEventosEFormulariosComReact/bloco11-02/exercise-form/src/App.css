@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 50px auto;
+  border: 1px solid black;
+}
+
+.registerForm h1 {
+  text-align: center;
+}
+
+.personalData {
+  display: flex;
+  flex-direction: column;
+}
+
+.personalData .label {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lastRoleData {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lastRoleData .label {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.labelInput {
+  margin-top: 20px;
+}
+
+textarea {
+  resize: none;
+}
+
+.enviar {
+  padding: 20px;
+  border-radius: 5px;
+  width: 20%;
+  margin: 20px auto;
+}
+
+.limpar {
+  padding: 20px;
+  border-radius: 5px;
+  width: 20%;
+  margin: 20px auto;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 50px auto;
+  border: 1px solid black;
+}
+
+hr {
+  border: 1px solid black;
+  width: 80%
+}
