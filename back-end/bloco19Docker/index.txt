@@ -1,0 +1,46 @@
+- Comandos básicos do Docker:
+1 - docker <comando> <subcomando> <parâmetros> é o formato padrão para comandos não-abreviados no CLI;
+2 - Utilize o parâmetro --help no <comando> ou <subcomando> para ter a relação completa do que pode ser executado a partir deles;
+* - Exemplo: docker container --help ou docker container run --help.
+3 - Os <parâmetros> são opcionais na execução dos comandos;
+4 - O conteúdo faz referência à documentação oficial do Docker.
+5 - Nos exemplos desta seção nós usaremos imagens Docker que já foram construídas e publicadas no Docker Hub de maneira pública. Em um próximo momento, vamos aprender como criar nossas próprias imagens Docker e executá-las como containers!
+
+[] - Comandos;
+() - Retornos;
+
+1 - [docker images]:
+(para visualizar todas as imagens Docker que já estão presentes em sua máquina.
+Ao tentar executar um container com uma imagem específica e esta imagem não estiver presente em nossa máquina, o Docker por padrão tentará obter a imagem Docker através do seu Registry, o Docker Hub);
+2 - [docker container ls] ou [docker ps]:
+(para listar todos os containers em execução neste momento em sua máquina);
+(Entretanto, por padrão, o comando docker ps não exibe containers que foram parados ou que terminaram sua execução. Para visualizar todos os containers atuais, incluindo os que estão em execução e também parados, é necessário utilizar a flag -a);
+3 - [docker container run <flags>? <imagem>:<tag> <argumentos>?]:
+(para executar um container utilizando a imagem identificada pelo <imagem>:<tag>);
+4 - [docker container run --rm alpine:3.14 echo "Hello World 3"]:
+(A flag --rm indica para o Docker que desejamos que um container seja removido ao final da sua execução);
+5 - [docker container run --rm -d alpine:3.14 sleep 300]:
+(A flag -d ou --detach faz com que a execução do container ocorra em segundo plano, ou seja, embora não esteja visível, o container executará de forma assíncrona. Esta opção é interessante quando o programa a ser executado é um servidor ou algum processo que você sabe previamente que terá uma execução demorada);
+6 - [docker stop <nome-do-container>]:
+(Para forçar a parada de execução do container acima, podemos usar o comando docker stop <nome-do-container>. Este comando força o container a terminar sua execução atual);
+7 - [docker stop -t 0 <nome-do-container>]:
+(o comando docker stop envia um pedido educado (chamado internamente de SIGTERM) ao container para dar tempo de ele encerrar tudo o que precisa antes de parar sua execução de fato. Entretanto, o comando sleep que estamos utilizando ignora esse pedido educado do Docker. Para que o pedido seja forçado (chamado internamente de SIGKILL), vamos utilizar a flag -t 0.);
+8 - [docker rm <nome-do-container>]:
+(Você pode remover os containers com este comando);
+(Um container só pode ser removido com o comando docker rm <nome-do-container> se ele estiver parado ou tiver sua execução terminada**);
+
+- Comandos avançados do Docker:
+
+1 - O Docker nos permite executar um comando dentro um container que já está em execução. Isso é muito útil, pois nos ajuda a encontrar problemas durante a execução dos nossos projetos. Nós vamos utilizá-lo para executar o programa sh, que nos permite simular um acesso de terminal dentro do container que já está em execução! Legal, né?
+
+[] - Comandos;
+() - Retornos;
+
+1 - [docker exec -it <nome-do-container> <comando-a-ser-executado>]:
+(testando o acesso ao terminal com o mesmo exemplo de container criado anteriormente);
+2 - [docker logs <flags> <nome-do-container>]:
+(Quando executamos um novo container no modo detatched, isto é, em segundo plano, nós deixamos de ver as informações (logs, erros, etc) que o programa está executando. Entretanto, o Docker oferece um comando para que a gente possa ver essas informações sem precisar se conectar diretamente ao terminal do container);
+3 - [docker top]:
+(traz as informações sobre os processos que estão sendo rodados dentro do container, o que não inclui, por exemplo, serviços que são compartilhados com o sistema hospedeiro);
+4 - [docker container prune]:
+(remove todos os containers inativos do seu computador. Além disso, ele pede uma confirmação para executar a operação e no final mostra a quantidade de espaço em disco recuperado);
