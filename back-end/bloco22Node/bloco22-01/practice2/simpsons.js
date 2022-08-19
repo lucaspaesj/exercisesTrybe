@@ -1,0 +1,1 @@
+const simpsons = [null,null,null,null,null,null,null,{"id":"8","name":"Maggie Simpson"},null,null,{"id":11,"name":"Maggie Simpson"}]; module.exports = simpsons;
