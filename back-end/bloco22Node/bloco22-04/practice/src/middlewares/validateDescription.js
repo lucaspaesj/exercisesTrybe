@@ -1,5 +1,6 @@
 const validateDescription = (req, res, next) => {
   const { description: { createdAt, rating, difficulty } } = req.body;
+  const { description } = req.body;
   if (!description) {
     return res.status(400).json({ message: "O campo description é obrigatório"});
   }
